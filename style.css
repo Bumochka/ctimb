@@ -104,7 +104,7 @@ h1, h2, h3 {
 .hero {
     height: 80vh;
     /* Замените на вашу картинку из ПЗ №3 */
-    background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80') no-repeat center center/cover;
+    background: url('https://avatars.mds.yandex.net/i?id=08ec9a1b2ecbc6d13b19a4227bdc08ac_l-9228658-images-thumbs&n=13') no-repeat center center/cover;
     position: relative;
     color: white;
     display: flex;
@@ -327,4 +327,5 @@ h1, h2, h3 {
         text-align: center;
         gap: 20px;
     }
+
 }
