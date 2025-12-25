@@ -1,0 +1,330 @@
+
+/* Первое изображение (конь.png) */
+.features .feature-item:nth-child(1) .icon img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Второе изображение (zamok.png) */
+.features .feature-item:nth-child(2) .icon img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+}
+
+/* Третье изображение (znak.png) */
+.features .feature-item:nth-child(3) .icon img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+/* Основные настройки */
+:root {
+    --primary: #2563EB;      /* Глубокий синий */
+    --danger: #DC2626;       /* Ярко-красный */
+    --success: #16A34A;      /* Зеленый */
+    --bg-light: #F3F4F6;     /* Светло-серый */
+    --text-dark: #1F2937;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Меню */
+.navbar {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+/* 2. Обложка */
+.hero {
+    height: 80vh;
+    /* Замените на вашу картинку из ПЗ №3 */
+    background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(37, 99, 235, 0.7); /* Синяя заливка с прозрачностью */
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* Секции */
+.section {
+    padding: 80px 0;
+}
+
+.about-section {
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.text-block {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Секция с угрозами */
+.text-card {
+    background: white;
+    padding: 40px;
+    border-left: 5px solid var(--danger);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.threat-list {
+    margin-top: 20px;
+    list-style-position: inside;
+}
+
+.threat-list li {
+    margin-bottom: 15px;
+}
+
+/* Блок Преимущества (Грид) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    border-color: var(--success);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Призыв к действию */
+.cta {
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.cta h2 {
+    margin: 10px 0 30px;
+}
+/* Специальные стили для страницы кейсов */
+.case-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Фоны для кейсов (замените URL на свои из ПЗ №3) */
+.case-student { background-image: url('laptop_red_screen.jpg'); }
+.case-users { background-image: url('trojan_horse.jpg'); }
+.case-pro { background-image: url('network_virus.jpg'); }
+
+.badge {
+    background: var(--danger);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Оверлеи разных цветов */
+.danger-overlay { background: rgba(220, 38, 38, 0.7); }
+.primary-overlay { background: rgba(37, 99, 235, 0.7); }
+.dark-overlay { background: rgba(31, 41, 55, 0.8); }
+
+.case-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.case-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.solution {
+    border: 2px solid var(--success);
+    background: #f0fdf4;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+/* Стили для страницы UML */
+.uml-hero {
+    background-image: url('tech-bg.jpg'); /* Ваш синий фон из ПЗ №3 */
+    min-height: 400px;
+}
+
+.uml-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.uml-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.uml-image {
+    flex: 1;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.uml-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.uml-text {
+    flex: 1;
+}
+
+.uml-text h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .uml-row, .uml-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}

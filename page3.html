@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML-диаграммы — Медиабезопасность</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logo_from_pz3.png" alt="Лого" class="logo-img">
+                <span>Медиабезопасность</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Гид</a></li>
+                <li><a href="page2.html">Кейсы</a></li>
+                <li><a href="#" class="active">UML-диаграммы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero uml-hero">
+        <div class="hero-overlay primary-overlay">
+            <div class="container hero-content">
+                <h1>Визуализация процессов: UML-диаграммы</h1>
+                <p>Структурированный каталог схем, Эти диаграммы описывают работу системы защиты от вредоносных программ (Malware Protection System).</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="uml-row">
+                <div class="uml-image">
+                    <img src="use-case.png" alt="Use Case Diagram">
+                </div>
+                <div class="uml-text">
+                    <h3>1. Диаграмма вариантов использования (Use Case)</h3>
+                    <p>Это более высокоуровневое представление, разделяющее систему на логические блоки:
+
+                        Брандмауэр: Анализ трафика, блокировка соединений и настройка правил.
+                    
+                        Антивирус: Сканирование, обнаружение угроз и просмотр отчетов.
+                    
+                        Обслуживание: Обновление сигнатур и управление карантином.
+                    
+                        Суть: Наглядно показывает, за какие области отвечает Администратор (настройка и обслуживание), а за какие — Пользователь (запуск сканирования и просмотр отчетов).</p>
+                </div>
+            </div>
+
+
+            <div class="uml-row reverse">
+                <div class="uml-image">
+                    <img src="activity.png" alt="Activity Diagram">
+                </div>
+                <div class="uml-text">
+                    <h3>2. Диаграмма деятельности (Activity)</h3>
+                    <p>Описывает конкретный алгоритм процесса «Анализ и обработка файла»:
+
+                        Начало: Файл попадает на сканирование.
+                    
+                        Проверка: Если угроза не обнаружена — файл помечается безопасным.
+                    
+                        Обработка: Если угроза есть, система определяет её тип и проверяет, можно ли «вылечить» файл.
+                    
+                        Результат: Файл либо восстанавливается и возвращается пользователю, либо перемещается в карантин с уведомлением.</p>
+                </div>
+            </div>
+
+            <div class="uml-row">
+                <div class="uml-image">
+                    <img src="class.png" alt="Class Diagram">
+                </div>
+                <div class="uml-text">
+                    <h3>3. Диаграмма классов (Class)</h3>
+                    <p>Эта диаграмма показывает детальное взаимодействие ролей и функций системы.
+
+                        Акторы: Пользователь, Администратор безопасности и Облачная база угроз (External).
+                    
+                        Ключевые функции: Охватывает всё — от настройки правил брандмауэра и анализа трафика до ручного обновления сигнатур и управления карантином.
+                    
+                        Связи: Видны сложные зависимости (include/extend), например, как «Запуск сканирования» обязательно включает «Проверку сигнатур», а в случае отсутствия локальных данных система обращается к облачной базе.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="section cta">
+        <div class="container">
+            <a href="index.html" class="btn btn-primary">Вернуться к началу гида</a>
+        </div>
+    </footer>
+
+</body>
+</html>
