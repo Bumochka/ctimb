@@ -281,7 +281,7 @@ h1, h2, h3 {
 }
 /* Стили для страницы UML */
 .uml-hero {
-    background-image: url('tech-bg.jpg'); /* Ваш синий фон из ПЗ №3 */
+    background-image: url('https://universitas21.com/wp-content/uploads/2025/10/Untitled-design-5.jpg'); /* Ваш синий фон из ПЗ №3 */
     min-height: 400px;
 }
 
@@ -329,3 +329,4 @@ h1, h2, h3 {
     }
 
 }
+
