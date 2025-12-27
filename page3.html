@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UML-диаграммы — Медиабезопасность</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/002/596/399/non_2x/machine-learning-artificial-neural-network-ai-icon-vector.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@
             
             <div class="uml-row">
                 <div class="uml-image">
-                    <img src="use-case.png" alt="Use Case Diagram">
+                    <img src="class.png" alt="Use Case Diagram">
                 </div>
                 <div class="uml-text">
                     <h3>1. Диаграмма вариантов использования (Use Case)</h3>
@@ -76,7 +77,7 @@
 
             <div class="uml-row">
                 <div class="uml-image">
-                    <img src="class.png" alt="Class Diagram">
+                    <img src="use-case.png" alt="Class Diagram">
                 </div>
                 <div class="uml-text">
                     <h3>3. Диаграмма классов (Class)</h3>
@@ -99,5 +100,38 @@
         </div>
     </footer>
 
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="imgFull">
+        <div id="modal-caption"></div>
+    </div>
 </body>
+<script>
+    // Получаем элементы модального окна
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgFull");
+    const closeBtn = document.querySelector(".modal-close");
+
+    // Находим все картинки в блоках uml-image
+    const images = document.querySelectorAll('.uml-image img');
+
+    images.forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Берем путь из нажатой картинки
+        }
+    });
+
+    // Закрытие при клике на крестик
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Закрытие при клике в любое место вне картинки
+    modal.onclick = function(e) {
+        if (e.target !== modalImg) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </html>
